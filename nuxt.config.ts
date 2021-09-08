@@ -51,6 +51,9 @@ export default {
       // Google fonts --------------------------------------------------------|
       { rel: 'preconnect', href: 'https://fonts.googleapis.com'                 },
 			{ rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+
+      // Remix icon ----------------------------------------------------------|
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' },
     ],
   },
 
@@ -104,6 +107,11 @@ export default {
   modules: [
     // Progressive Web App ---------------------------------------------------|
     '@nuxtjs/pwa',
+
+    // Cookies ---------------------------------------------------------------|
+    ['cookie-universal-nuxt', {
+      alias: 'cookiz'
+    }]
   ],
 
   /**

@@ -1,0 +1,122 @@
+.login {
+  @apply h-screen max-w-64;
+  @apply mx-auto;
+
+  // Small screens (640)
+  @apply sm:(max-w-max);
+
+  // Large screens (1024)
+  @apply lg:(flex flex-row justify-center);
+  @apply lg:( pb-10);
+
+  // Desktop left side -------------------------------------------------------|
+  &-left {
+    @apply hidden lg:flex;
+    @apply items-center;
+  }
+
+  // Desktop right side ------------------------------------------------------|
+  &-right {
+    @apply h-full;
+    @apply flex flex-col justify-between;
+  }
+
+  // Mobile top --------------------------------------------------------------|
+  &-top {
+    @apply flex flex-col justify-center items-center;
+    @apply pt-8;
+    @apply w-full;
+
+    // Small screens (640)
+    @apply sm:(border-1);
+    @apply sm:(border-border bg-white);
+    @apply sm:(mt-11 px-11 pb-6);
+
+    // Large Screens (1024)
+    @apply lg:(relative top-[45%]);
+    @apply lg:(transform -translate-y-1/2);
+  }
+
+  // Mobile bottom -----------------------------------------------------------|
+  &-bottom {
+    // Large screens (1024)
+    @apply lg:hidden;
+  }
+
+  // Desktop phones ----------------------------------------------------------|
+  &__phones {
+    background-image: url('~/assets/img/smartphones.png');
+    background-position: 0 0;
+    background-size: 454px 618px;
+
+    @apply h-[619px] w-[454px];
+  }
+
+  // Instagram logo ----------------------------------------------------------|
+  &__logo {
+    background-image: url('~/assets/img/utils.png');
+    background-position: 0 -129px;
+    background-size: 440px 411px;
+
+    @apply w-[175px] h-[51px];
+  }
+
+  // Facebook login button ---------------------------------------------------|
+  &__facebook {
+    @apply mt-8;
+  }
+
+  // "OR" divisor ------------------------------------------------------------|
+  &__divisor {
+    @apply flex justify-center items-center gap-4;
+    @apply my-6;
+    @apply text-[13px] text-light font-semibold;
+    @apply w-full;
+
+    &-line {
+      @apply h-[1px] w-full;
+      @apply bg-border;
+    }
+  }
+
+  // Login form --------------------------------------------------------------|
+  &__form {
+    @apply flex flex-col;
+    @apply w-full;
+    @apply mb-6;
+
+    &-input {
+      @apply border-1 border-border;
+      @apply bg-body-color;
+      @apply mb-1 p-2;
+      @apply placeholder-opacity-75;
+      @apply rounded-[4px] outline-none;
+
+      // Small screens (640)
+      @apply sm:(w-64);
+    }
+
+    &-submit {
+      @apply mt-3;
+    }
+  }
+
+  // Register link -----------------------------------------------------------|
+  &__register {
+    &-link {
+      @apply text-blue-500;
+    }
+  }
+
+  // Watermark ---------------------------------------------------------------|
+  &__copy {
+    @apply flex flex-col items-center;
+    @apply text-light;
+    @apply pb-6;
+
+    &-brand {
+      @apply text-bigger;
+      @apply text-black font-semibold tracking-wider;
+    }
+  }
+}

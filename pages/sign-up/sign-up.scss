@@ -1,0 +1,34 @@
+.signup {
+  @apply flex flex-col items-center justify-center;
+  @apply h-screen p-12;
+  @apply text-center;
+
+  // Medium screens (768)
+  @apply md:items-start;
+  @apply md:text-left;
+  @apply md:p-24;
+
+  &-icon {
+    @apply text-8xl text-danger;
+  }
+
+  &-link {
+    @apply mt-6 max-w-28;
+  }
+
+  &__title {
+    @apply text-3xl;
+    @apply flex items-center gap-4;
+    @apply mt-8;
+
+    // Medium screens (768)
+    @apply md:text-6xl;
+  }
+
+  &__description {
+    @apply mt-12;
+
+    // Medium screens (768)
+    @apply md:text-lg;
+  }
+}
